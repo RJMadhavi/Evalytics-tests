@@ -8,6 +8,7 @@ Extensible Framework: Easily write custom assertions for specific evaluation cyc
 
 🛠️ Repository Structure
 
+```text
 Evalytics-tests/
 ├── tests/
 │   ├── __init__.py
@@ -18,6 +19,7 @@ Evalytics-tests/
 ├── config/                      # Test configuration templates
 ├── requirements.txt             # Python dependencies
 └── README.md
+```
 
 ⚙️ Installation & Setup (Plug & Play)
 
@@ -59,10 +61,12 @@ Dependencies Check: Ensure that your local Python runtime matches the version re
 
 📝 Error Checking & Troubleshooting
 
-Issue	Resolution
-Missing Fixtures / File Not Found	Verify that test execution paths resolve correctly to the fixtures/ directory when running isolated tests.
-Dependency Conflicts	Run pip list to check installed package versions against constraints in requirements.txt.
-Authorization Failures	If integration points are failing, ensure you run in offline mock mode using markers: pytest -m "not integration".
+| Issue | Resolution |
+| :--- | ---: |
+| Missing Fixtures / File Not Found | Verify that test execution paths resolve correctly to the fixtures/ directory when running isolated tests.
+| Dependency Conflicts | Run pip list to check installed package versions against constraints in requirements.txt. |
+| Authorization Failures | If integration points are failing, ensure you run in offline mock mode using markers: pytest -m "not integration". | 
+
 
 🤝 Contributing
 
