@@ -1,11 +1,13 @@
 Welcome to Evalytics-tests, a comprehensive testing and validation suite designed for the Evalytics ecosystem. This repository contains automated unit, integration, and performance validation scripts to ensure evaluation pipelines run seamlessly.
 
 🚀 Features
+
 Plug-and-Play Architecture: Modular test suites designed to drop into existing pipelines with minimal configuration.
 Automated Evaluation Checks: Validates data input mapping, score calculations, and report generation processes.
 Extensible Framework: Easily write custom assertions for specific evaluation cycles.
 
 🛠️ Repository Structure
+
 Evalytics-tests/
 ├── tests/
 │   ├── __init__.py
@@ -18,12 +20,13 @@ Evalytics-tests/
 └── README.md
 
 ⚙️ Installation & Setup (Plug & Play)
+
 To set up and run the test suite locally, follow these steps:
 
 ### 1. Clone the repository
 ```bash
 git clone [https://github.com/your-username/api-test-suite.git](https://github.com/your-username/api-test-suite.git)
-cd api-test-suite
+cd api-test-suite```
 
 ### 2. Create a Virtual Environment
 ```bash
