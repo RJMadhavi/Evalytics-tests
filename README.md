@@ -1,15 +1,16 @@
 Welcome to Evalytics-tests, a comprehensive testing and validation suite designed for the Evalytics ecosystem. This repository contains automated unit, integration, and performance validation scripts to ensure evaluation pipelines run seamlessly.
 
-🔌 Plug-and-Play Capabilities
+**🔌 Plug-and-Play Capabilities**
+
 This test suite is designed for seamless integration, with a few environment-specific considerations:
 
-Decoupled Architecture: Tests utilize offline mock fixtures stored in the fixtures/ directory by default.
+**Decoupled Architecture:** Tests utilize offline mock fixtures stored in the fixtures/ directory by default.
 
-Environment Variables: When connecting to live staging APIs or active Google/Cloud storage schemas used by Evalytics, copy .env.example to .env and fill in your credentials.
+**Environment Variables:** When connecting to live staging APIs or active Google/Cloud storage schemas used by Evalytics, copy .env.example to .env and fill in your credentials.
 
-Python Runtime: Ensure your local Python environment matches the version required by the core Evalytics implementation (Python 3.9+ recommended) to prevent syntax or typing discrepancies.
+**Python Runtime:** Ensure your local Python environment matches the version required by the core Evalytics implementation (Python 3.9+ recommended) to prevent syntax or typing discrepancies.
 
-🛠️ Repository Structure
+**🛠️ Repository Structure**
 
 ```text
 Evalytics-tests/
@@ -24,7 +25,7 @@ Evalytics-tests/
 └── README.md
 ```
 
-⚙️ Installation & Setup (Plug & Play)
+**⚙️ Installation & Setup (Plug & Play)**
 
 To set up and run the test suite locally, follow these steps:
 
@@ -56,13 +57,13 @@ To run a specific test module (e.g., pipeline validation):
 pytest tests/test_eval_pipeline.py -v
 ```
 
-🔌 Are these tests Plug-and-Play?
+**🔌 Are these tests Plug-and-Play?**
 
 Yes, with conditions: The tests are designed to be decoupled using mock fixtures located in the fixtures/ directory.
 Environment Variables: If you are connecting these tests to live staging APIs or active Google/Cloud storage schemas used by Evalytics, ensure you copy .env.example to .env and configure your credentials accordingly.
 Dependencies Check: Ensure that your local Python runtime matches the version required by your main Evalytics implementation (typically Python 3.9+) to prevent syntax or typing mismatches.
 
-📝 Error Checking & Troubleshooting
+**📝 Error Checking & Troubleshooting**
 
 | Issue | Resolution |
 | :--- | ---: |
@@ -71,6 +72,6 @@ Dependencies Check: Ensure that your local Python runtime matches the version re
 | Authorization Failures | If integration points are failing, ensure you run in offline mock mode using markers: pytest -m "not integration". | 
 
 
-🤝 Contributing
+**🤝 Contributing**
 
 Contributions are welcome! Please fork the repository, submit a pull request, or open an issue for any bug fixes or expanded test vectors.
