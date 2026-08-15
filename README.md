@@ -1,10 +1,13 @@
 Welcome to Evalytics-tests, a comprehensive testing and validation suite designed for the Evalytics ecosystem. This repository contains automated unit, integration, and performance validation scripts to ensure evaluation pipelines run seamlessly.
 
-🚀 Features
+🔌 Plug-and-Play Capabilities
+This test suite is designed for seamless integration, with a few environment-specific considerations:
 
-Plug-and-Play Architecture: Modular test suites designed to drop into existing pipelines with minimal configuration.
-Automated Evaluation Checks: Validates data input mapping, score calculations, and report generation processes.
-Extensible Framework: Easily write custom assertions for specific evaluation cycles.
+Decoupled Architecture: Tests utilize offline mock fixtures stored in the fixtures/ directory by default.
+
+Environment Variables: When connecting to live staging APIs or active Google/Cloud storage schemas used by Evalytics, copy .env.example to .env and fill in your credentials.
+
+Python Runtime: Ensure your local Python environment matches the version required by the core Evalytics implementation (Python 3.9+ recommended) to prevent syntax or typing discrepancies.
 
 🛠️ Repository Structure
 
