@@ -26,25 +26,30 @@ To set up and run the test suite locally, follow these steps:
 ### 1. Clone the repository
 ```bash
 git clone [https://github.com/your-username/api-test-suite.git](https://github.com/your-username/api-test-suite.git)
-cd api-test-suite```
+cd api-test-suite
+```
 
 ### 2. Create a Virtual Environment
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
 
 ### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
+```
 
 🧪 Running the Tests
 The tests are structured to run via pytest. To execute the entire plug-and-play test matrix:
 ```bash
 pytest -v
+```
 
 To run a specific test module (e.g., pipeline validation):
 ```bash
 pytest tests/test_eval_pipeline.py -v
+```
 
 🔌 Are these tests Plug-and-Play?
 Yes, with conditions: The tests are designed to be decoupled using mock fixtures located in the fixtures/ directory.
