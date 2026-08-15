@@ -1,0 +1,36 @@
+(venv) ternikars@Ternikarss-Air evalytics-apitests % python discover_endpoints.py
+[DEBUG] Authenticated URL: https://madhavis-academy.evalytics.in/teacher/dashboard
+
+================ DISCOVERED DASHBOARD ENDPOINTS ================
+
+--- Authenticated Navigation Pages (GET) ---
+  GET  -> /
+  GET  -> /feedback/
+  GET  -> /settings
+  GET  -> /teacher/academy-settings
+  GET  -> /teacher/activity/
+  GET  -> /teacher/assignments
+  GET  -> /teacher/batches
+  GET  -> /teacher/dashboard
+  GET  -> /teacher/enrollments
+  GET  -> /teacher/equation-converter
+  GET  -> /teacher/genie
+  GET  -> /teacher/reports
+  GET  -> /teacher/subjects
+  GET  -> /teacher/subjects/10/edit
+  GET  -> /teacher/subjects/10/questions
+  GET  -> /teacher/subjects/10/upload
+  GET  -> /teacher/subjects/5/edit
+  GET  -> /teacher/subjects/5/questions
+  GET  -> /teacher/subjects/5/upload
+  GET  -> /teacher/subjects/7/edit
+  GET  -> /teacher/subjects/7/questions
+  GET  -> /teacher/subjects/7/upload
+  GET  -> /teacher/subjects/9/edit
+  GET  -> /teacher/subjects/9/questions
+  GET  -> /teacher/subjects/9/upload
+  GET  -> /teacher/subjects/new
+
+--- Form Action Endpoints (POST) ---
+  POST -> /logout
+================================================================
