@@ -52,15 +52,18 @@ pytest tests/test_eval_pipeline.py -v
 ```
 
 🔌 Are these tests Plug-and-Play?
+
 Yes, with conditions: The tests are designed to be decoupled using mock fixtures located in the fixtures/ directory.
 Environment Variables: If you are connecting these tests to live staging APIs or active Google/Cloud storage schemas used by Evalytics, ensure you copy .env.example to .env and configure your credentials accordingly.
 Dependencies Check: Ensure that your local Python runtime matches the version required by your main Evalytics implementation (typically Python 3.9+) to prevent syntax or typing mismatches.
 
 📝 Error Checking & Troubleshooting
-If you run into issues during execution, check for the following common errors:
-Missing Fixtures / File Not Found: Ensure your test paths point correctly to the mock directories if running isolated unit tests.
-Dependency Conflicts: Run pip list to check package versions against requirements.txt.
-Environment Scope: If tests fail on authorization blocks, make sure you are executing them in an offline mock mode (pytest -m "not integration" if markers are configured).
+
+Issue	Resolution
+Missing Fixtures / File Not Found	Verify that test execution paths resolve correctly to the fixtures/ directory when running isolated tests.
+Dependency Conflicts	Run pip list to check installed package versions against constraints in requirements.txt.
+Authorization Failures	If integration points are failing, ensure you run in offline mock mode using markers: pytest -m "not integration".
 
 🤝 Contributing
+
 Contributions are welcome! Please fork the repository, submit a pull request, or open an issue for any bug fixes or expanded test vectors.
