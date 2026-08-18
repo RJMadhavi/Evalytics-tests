@@ -1,0 +1,47 @@
+name: Evalytics Automated Test Suite
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  run-tests:
+    name: Run Test Suite
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      # If using Playwright for UI tests:
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+        continue-on-error: true # Safe to keep if using API-only tests
+
+      - name: Execute Tests
+        env:
+          BASE_URL: ${{ secrets.EVALYTICS_BASE_URL }} # Pass sensitive app URLs/creds via Secrets
+        run: |
+          pytest --junitxml=reports/junit.xml --html=reports/report.html --self-contained-html -n auto
+
+      - name: Upload Test Report Artifact
+        if: always() # Upload report even if tests fail
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-execution-report
+          path: reports/
+          retention-days: 14
